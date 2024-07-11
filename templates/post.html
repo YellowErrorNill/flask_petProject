@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>{{title}}</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/style_con.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="static/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="col-md-8">
+                     {% for cat, msg in get_flashed_messages(True) %}
+                     <div class="flash {{cat}}">{{msg}}</div>
+                     {% endfor %}
+                     <div class="row border_left">
+                        <div class="col-md-12">
+
+                        </div>
+                        <div class="col-md-9">
+                           <div class="infoma">
+
+                              <ul class="fullink">
+                                 <li><a href="{{url_for('index')}}">Главная страница</a></li>
+                                 <li><a href={{url_for('about')}}">О нас</a></li>
+                                 <li><a href="{{url_for('category')}}">Статьи</a></li>
+                                 <li><a href="{{url_for('work')}}">Профиль</a></li>
+                                 <li><a href="{{url_for('index')}}">Выйти</a></li>
+                              </ul>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+
+      <!-- end loader -->
+
+      <!-- contact -->
+      <div class="contact">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Добавление статьи</h2>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <form action="/addPost" method="post" id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-6 ">
+                           <input class="contactus" placeholder="Название статьи: " type="type" name="name">
+                        </div>
+
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Url статьи:" type="type" name="url">
+                        </div>
+
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Текст статьи: " type="type" Message="Name" name="post" ></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Добавить</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+
+            </div>
+         </div>
+      </div>
+      <!-- contact -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+
+   </body>
+</html>

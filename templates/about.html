@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>{{title}}</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{{url_for('about')}}">
+            <img src="images/logo.png" alt="" />
+            <span>
+              О сайте
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <ul class="navbar-nav  ">
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Главная страница <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('about')}}"> О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('work')}}">Выход </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('category')}}"> Статьи </a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="{{url_for('register')}}">
+                <span>
+                  Регистрация
+                </span>
+              </a>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+
+          <div>
+
+          </div>
+
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- experience section -->
+
+
+
+  <!-- end experience section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-9 mx-auto">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="detail-box">
+        <h2>
+          Про мой сайт
+        </h2>
+        <p>
+          Создание блога с использованием Flask — это отличный способ изучить основы веб-разработки на Python. Flask — это легковесный веб-фреймворк, который позволяет быстро создавать веб-приложения. Этот проект поможет вам понять, как работать с HTML-шаблонами, формами и базами данных.
+          <br>
+          app.py — основной файл приложения
+          templates/ — папка с HTML-шаблонами
+          static/ — папка с CSS и JavaScript файлами
+          <br>
+          Этот проект поможет вам понять, как работать с HTML-шаблонами, формами и базами данных. Вы научитесь создавать маршруты и обрабатывать запросы в Flask, а также работать с пользовательским вводом и отображать данные на веб-странице.</p>
+        <a href="https://habr.com/ru/articles/783574/">
+          Читать больше
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+
+
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> Сайт создан мной,
+        <a href="https://html.design/">Матчитов Еремей</a>
+      </p>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+
+
+
+</body>
+</body>
+
+</html>

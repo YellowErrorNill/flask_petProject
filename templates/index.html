@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>{{title}}</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+      {% for cat, msg in get_flashed_messages(True) %}
+      <div class="flash {{cat}}">{{msg}}</div>
+      {% endfor %}
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" />
+            <span>
+              Свобода
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('index')}}">Главгая <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('about')}}"> :О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('work')}}">Профиль </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('category')}}"> Статьи </a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="{{url_for('register')}}">
+                <span>
+                  Регистрация
+                </span>
+              </a>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          <div>
+            <div class="custom_menu-btn ">
+              <button>
+                <span class=" s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="carousel_btn-container">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="sr-only">Назад</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="sr-only">впр</span>
+        </a>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 offset-md-1">
+                  <div class="detail-box">
+                    <h1>
+                      Я всегда <br>
+                      буду <br>
+                      стараться победить!
+                    </h1>
+                    <p>
+                      Над садами грез развеюсь в прах
+                    </p>
+                    <div class="btn-box">
+                      <a href="{{url_for('addPost')}}" class="btn-1">
+                        Добавить статью
+                      </a>
+                      <a href="{{url_for('login')}}" class="btn-2">
+                        Вход
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="offset-md-1 col-md-4 img-container">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 offset-md-1">
+                  <div class="detail-box">
+                    <h1>
+                      You Can <br>
+                      Hire Freelancer <br>
+                      Here
+                    </h1>
+                    <p>
+                      It is a long established fact that a reader will be distracted by
+                      the readable content of a page
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn-1">
+                        About Us
+                      </a>
+                      <a href="" class="btn-2">
+                        Get A Quote
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- experience section -->
+
+  <section class="experience_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Сайт с статьями
+              </h2>
+            </div>
+            <p>
+              Пет проект сайт с добавлением статьей является одним из самых популярных проектов на питоне
+            </p>
+            <div class="btn-box">
+              <a href="{{url_for('category')}}" class="btn-1">
+                Статьи
+              </a>
+              <a href="{{url_for('about')}}" class="btn-2">
+                Обо мне
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end experience section -->
+
+  <!-- category section -->
+
+
+
+
+  <!-- end category section -->
+
+  <!-- about section -->
+
+
+
+  <!-- end about section -->
+
+  <!-- freelance section -->
+
+
+  <!-- end freelance section -->
+
+  <!-- client section -->
+
+
+
+
+  <!-- end client section -->
+
+
+
+  <!-- info section -->
+
+  <section class="info_section ">
+
+
+            <span>
+
+
+
+            </span>
+
+
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> Сайт создан мной,
+        <a href="https://html.design/">Матчитов Еремей</a>
+      </p>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+
+
+</body>
+</body>
+
+</html>
