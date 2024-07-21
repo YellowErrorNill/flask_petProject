@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" href="{{ url_for('.static', filename='css/style.css')}}" rel="stylesheet" />
+<title>{{ title }}</title>
+</head>
+<body>
+{% if menu -%}
+	<ul class="mainmenu">
+	{% for p in menu %}
+	<li><a href="{{ url_for(p.url) }}">{{p.title}}</a></li>
+	{% endfor %}
+	</ul>
+	<div class="clear"></div>
+{%- endif -%}
+<div class="content">
+
+</div>
+<footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> Сайт создан мной,
+        Матчитов Еремей</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

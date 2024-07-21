@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" href="{{ url_for('.static', filename='css/style.css')}}" rel="stylesheet" />
+<title>{{ title }}</title>
+</head>
+<body>
+{% if menu -%}
+	<ul class="mainmenu">
+	{% for p in menu %}
+	<li><a href="{{ url_for(p.url) }}">{{p.title}}</a></li>
+	{% endfor %}
+	</ul>
+	<div class="clear"></div>
+{%- endif -%}
+<h1>{{title}}</h1>
+<ul class="list-posts">
+{% for p in list %}
+<li>
+<p class="title">{{p.name}}</p>
+<p class="annonce">{{ p.email }}</p>
+</li>
+{% endfor %}
+</ul>
+<footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> Сайт создан мной,
+        Матчитов Еремей</a>
+      </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
